@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 	"log"
-	"github.com/joho/godotenv"
+	// "github.com/joho/godotenv"
 
 	"github.com/aws/aws-lambda-go/lambda"
 
@@ -17,10 +17,10 @@ import (
 
 func handler() error {
 
-	err := godotenv.Load(".env")
-    if err != nil {
-        log.Fatalf("Error loading .env file: %v", err)
-    }
+	// err := godotenv.Load(".env")
+    // if err != nil {
+    //     log.Fatalf("Error loading .env file: %v", err)
+    // }
 
 	client := openai.NewClient(os.Getenv("OPENAI_TOKEN"))
 	resp, err := client.CreateChatCompletion(
