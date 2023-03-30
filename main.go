@@ -30,7 +30,7 @@ func handler() error {
 			Messages: []openai.ChatCompletionMessage{
 				{
 					Role:    openai.ChatMessageRoleUser,
-					Content: `give me 45min workout plan using weightlifting exercises with barbel only, no cardio exercices. 
+					Content: `give me 45min workout plan using weightlifting exercises with barbel only. 
 					Follow this format: Name of exercise (Minutes): Number of reps * Number of sets.`,
 				},
 			},
